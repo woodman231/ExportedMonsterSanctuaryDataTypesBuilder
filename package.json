@@ -1,0 +1,22 @@
+{
+  "name": "@woodman231/exportedmonstersanctuarydatatypesgenerator",
+  "version": "1.0.0",
+  "description": "Analyzes the ExportedMonsterSanctuaryData package and generate TypeScript types for the data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sean Woodward <seanwoodward@live.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@woodman231/exportedmonstersanctuarydata": "^1.0.0",
+    "json-to-ts": "^1.7.0",
+    "typescript-formatter": "^7.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woodman231/ExportedMonsterSanctuaryDataTypesBuilder.git"
+  },
+  "homepage": "https://github.com/woodman231/ExportedMonsterSanctuaryDataTypesBuilder"
+}
