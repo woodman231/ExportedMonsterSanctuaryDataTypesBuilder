@@ -132,6 +132,7 @@ const changeNumbersToEnums = (interfacesToWrite) => {
     for (let i = 0; i < interfacesToWrite.length; i++) {
         let interfaceDetails = interfacesToWrite[i];
 
+        // Target specific types
         if (interfaceDetails.startsWith('interface Monster {')) {
             interfaceDetails = interfaceDetails.replace('TypesArray: number[];', 'TypesArray: EMonsterType[];');
         }
@@ -145,7 +146,7 @@ const changeNumbersToEnums = (interfacesToWrite) => {
         }
 
         if (interfaceDetails.startsWith('interface ActionTypeRestrictionProperties {')) {
-            interfaceDetails = interfaceDetails.replace('Types: number[];', 'TypeRestriction: EMonsterType[];');
+            interfaceDetails = interfaceDetails.replace('Types: number[];', 'Types: EMonsterType[];');
         }
 
         if (interfaceDetails.startsWith('interface PassiveSkillProperties {')) {
@@ -166,6 +167,7 @@ const changeNumbersToEnums = (interfacesToWrite) => {
             interfaceDetails = interfaceDetails.replace('AppliedDebuff: number;', 'AppliedDebuff: DebuffType;');
         }
 
+        // target specific fields
         if (interfaceDetails.includes('Element: number;')) {
             interfaceDetails = interfaceDetails.replace('Element: number;', 'Element: EElement;');
         }
@@ -204,6 +206,14 @@ const changeNumbersToEnums = (interfacesToWrite) => {
 
         if (interfaceDetails.includes('TypeRestriction: number;')) {
             interfaceDetails = interfaceDetails.replace('TypeRestriction: number;', 'TypeRestriction: EMonsterType;');
+        }
+
+        if(interfaceDetails.includes('MonsterType: number;')) {
+            interfaceDetails = interfaceDetails.replace('MonsterType: number;', 'MonsterType: EMonsterType;');            
+        }
+
+        if(interfaceDetails.includes('MonsterType2: number;')) {
+            interfaceDetails = interfaceDetails.replace('MonsterType2: number;', 'MonsterType2: EMonsterType;');            
         }
 
         if (interfaceDetails.includes('Buff2: number;')) {
