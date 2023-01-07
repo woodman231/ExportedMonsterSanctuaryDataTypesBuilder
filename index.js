@@ -160,6 +160,7 @@ const changeNumbersToEnums = (interfacesToWrite) => {
 
         if(interfaceDetails.startsWith('interface ActionSpecialBuffProperties {')) {
             interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;');            
+            interfaceDetails = interfaceDetails.replace('Buff2: number;', 'Buff2: ESpecialBuff;');
         }
 
         if(interfaceDetails.startsWith('interface PassiveSpecialBuffChanceProperties {')) {
