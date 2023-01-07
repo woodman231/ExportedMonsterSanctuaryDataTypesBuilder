@@ -158,6 +158,22 @@ const changeNumbersToEnums = (interfacesToWrite) => {
             interfaceDetails = interfaceDetails.replace('BuffType: number;', 'BuffType: ESpecialBuff;');
         }
 
+        if(interfaceDetails.startsWith('interface ActionSpecialBuffProperties {')) {
+            interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;');            
+        }
+
+        if(interfaceDetails.startsWith('interface PassiveSpecialBuffChanceProperties {')) {
+            interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;');            
+        }
+
+        if(interfaceDetails.startsWith('interface PassiveSpecialBuffOnGettingHitProperties {')) {
+            interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;');            
+        }
+
+        if(interfaceDetails.startsWith('interface PassiveSpecialBuffDamageModifierProperties {')) {
+            interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;');            
+        }
+
         if (interfaceDetails.startsWith('interface PassiveShockChargingProperties {')) {
             interfaceDetails = interfaceDetails.replace('Buff: number;', 'Buff: ESpecialBuff;')
         }

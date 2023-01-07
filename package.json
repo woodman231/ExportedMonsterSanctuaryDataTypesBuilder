@@ -1,6 +1,6 @@
 {
   "name": "@woodman231/exportedmonstersanctuarydatatypesgenerator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Analyzes the ExportedMonsterSanctuaryData package and generate TypeScript types for the data.",
   "main": "index.js",
   "scripts": {
